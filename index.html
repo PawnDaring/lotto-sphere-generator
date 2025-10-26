@@ -18,24 +18,61 @@
         font-family: 'Orbitron', sans-serif;
       }
       
-      /* Theme Switcher Button */
-      .theme-switcher {
+      /* Top Bar Container */
+      .top-bar {
         position: fixed;
-        top: 20px;
-        right: 20px;
+        top: 0;
+        left: 0;
+        right: 0;
         z-index: 1000;
         display: flex;
-        gap: 8px;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 15px;
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      .theme-switcher {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+        justify-content: center;
       }
       
       .theme-btn {
-        padding: 8px 12px;
+        padding: 6px 10px;
         border: none;
         border-radius: 4px;
         cursor: pointer;
-        font-size: 12px;
+        font-size: 11px;
         font-weight: bold;
         transition: all 0.3s ease;
+        white-space: nowrap;
+      }
+      
+      /* Mobile responsive adjustments */
+      @media (max-width: 640px) {
+        .theme-switcher {
+          gap: 4px;
+        }
+        
+        .theme-btn {
+          padding: 4px 8px;
+          font-size: 10px;
+        }
+      }
+      
+      /* Add top padding to body to account for fixed top bar */
+      body {
+        padding-top: 50px;
+      }
+      
+      @media (max-width: 640px) {
+        body {
+          padding-top: 55px;
+        }
       }
       
       /* ===================
@@ -44,6 +81,11 @@
       .theme-lcd {
         background: #c5d4c1;
         color: #2d4a2b;
+      }
+      
+      .theme-lcd .top-bar {
+        background: rgba(197, 212, 193, 0.95);
+        border-bottom: 2px solid #6b7c68;
       }
       
       .theme-lcd .theme-btn {
@@ -83,6 +125,12 @@
         color: #e8e8e8;
       }
       
+      .theme-sleek .top-bar {
+        background: linear-gradient(135deg, rgba(26, 26, 26, 0.95), rgba(45, 45, 45, 0.95));
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+      }
+      
       .theme-sleek .theme-btn {
         background: linear-gradient(135deg, #333, #555);
         color: #e8e8e8;
@@ -120,6 +168,12 @@
       .theme-matrix {
         background: #000;
         color: #00ff00;
+      }
+      
+      .theme-matrix .top-bar {
+        background: rgba(0, 0, 0, 0.95);
+        border-bottom: 1px solid #00aa00;
+        box-shadow: 0 2px 10px rgba(0, 255, 0, 0.2);
       }
       
       .theme-matrix .theme-btn {
@@ -187,6 +241,12 @@
       .theme-pokemon {
         background: linear-gradient(135deg, #E8E8E8 0%, #C0C0C0 50%, #A0A0A0 100%);
         color: #2C3E50;
+      }
+      
+      .theme-pokemon .top-bar {
+        background: linear-gradient(135deg, rgba(232, 232, 232, 0.95), rgba(192, 192, 192, 0.95));
+        border-bottom: 3px solid #1E88E5;
+        box-shadow: 0 2px 15px rgba(30, 136, 229, 0.3);
       }
       
       .theme-pokemon .theme-btn {
@@ -333,17 +393,19 @@
   }
 }
 </script>
-  <script type="module" crossorigin src="/lotto-sphere-generator/assets/index-CY-av6mi.js"></script>
+  <script type="module" crossorigin src="/lotto-sphere-generator/assets/index-nUlHqUb-.js"></script>
 </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     
-    <!-- Theme Switcher -->
-    <div class="theme-switcher">
-      <button class="theme-btn" onclick="setTheme('lcd')" data-theme="lcd">LCD</button>
-      <button class="theme-btn" onclick="setTheme('sleek')" data-theme="sleek">SLEEK</button>
-      <button class="theme-btn active" onclick="setTheme('matrix')" data-theme="matrix">MATRIX</button>
-      <button class="theme-btn" onclick="setTheme('pokemon')" data-theme="pokemon">POKEMON</button>
+    <!-- Top Bar with Theme Switcher -->
+    <div class="top-bar">
+      <div class="theme-switcher">
+        <button class="theme-btn" onclick="setTheme('lcd')" data-theme="lcd">LCD</button>
+        <button class="theme-btn" onclick="setTheme('sleek')" data-theme="sleek">SLEEK</button>
+        <button class="theme-btn active" onclick="setTheme('matrix')" data-theme="matrix">MATRIX</button>
+        <button class="theme-btn" onclick="setTheme('pokemon')" data-theme="pokemon">POKEMON</button>
+      </div>
     </div>
     
     <div id="root"></div>
