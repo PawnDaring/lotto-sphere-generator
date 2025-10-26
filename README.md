@@ -52,7 +52,7 @@ A modern, interactive lottery number generator with multiple themes, scoring sys
 
 ## 🚀 Live Demo
 
-**[Play Now!](https://YOUR_GITHUB_USERNAME.github.io/lotto-sphere-generator)**
+**[Play Now!](https://pawndaring.github.io/lotto-sphere-generator)**
 
 ## 🛠 Tech Stack
 
@@ -79,7 +79,7 @@ A modern, interactive lottery number generator with multiple themes, scoring sys
 ### Setup
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/lotto-sphere-generator.git
+git clone https://github.com/PawnDaring/lotto-sphere-generator.git
 cd lotto-sphere-generator
 
 # Install dependencies

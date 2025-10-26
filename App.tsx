@@ -281,9 +281,9 @@ const App: React.FC = () => {
   return (
     <div className={`min-h-screen flex flex-col items-center justify-center p-4 lg:p-8 overflow-hidden relative ${currentTheme === 'matrix' ? 'matrix-bg' : currentTheme === 'pokemon' ? 'pokemon-bg' : ''}`}>
       {isVictory && <Confetti />}
-      <Scoreboard achievements={achievements} totalClicks={totalClicks} onResetScore={handleResetScore} />
       <div className="relative z-10 flex flex-col lg:flex-row items-start justify-center gap-8 w-full max-w-6xl">
         <div className="flex flex-col items-center justify-center gap-6 md:gap-8 w-full">
+          <Scoreboard achievements={achievements} totalClicks={totalClicks} onResetScore={handleResetScore} />
           <WinningNumbersDisplay 
               whiteBalls={winningNumbers.whiteBalls}
               powerball={winningNumbers.powerball}

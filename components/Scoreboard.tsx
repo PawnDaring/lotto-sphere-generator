@@ -64,13 +64,13 @@ const Scoreboard: React.FC<ScoreboardProps> = ({ achievements, totalClicks, onRe
 
   const getContainerClass = () => {
     if (currentTheme === 'lcd') {
-      return 'fixed top-4 left-4 bg-[#a8b5a5] border-2 border-[#6b7c68] rounded px-4 py-2 shadow-lg z-50 min-w-[120px]';
+      return 'bg-[#a8b5a5] border-2 border-[#6b7c68] rounded-lg px-6 py-4 shadow-lg w-full max-w-md mx-auto text-center';
     } else if (currentTheme === 'sleek') {
-      return 'fixed top-4 left-4 bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm border border-white/20 rounded-lg px-4 py-2 shadow-2xl z-50 min-w-[120px]';
+      return 'bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm border border-white/20 rounded-lg px-6 py-4 shadow-2xl w-full max-w-md mx-auto text-center';
     } else if (currentTheme === 'pokemon') {
-      return 'fixed top-4 left-4 pokemon-panel px-4 py-2 shadow-2xl z-50 min-w-[120px]';
+      return 'pokemon-panel px-6 py-4 shadow-2xl w-full max-w-md mx-auto text-center';
     } else {
-      return 'fixed top-4 left-4 bg-[#001100]/90 border border-[#00aa00] rounded px-4 py-2 shadow-lg shadow-[#00ff00]/20 z-50 min-w-[120px]';
+      return 'bg-[#001100]/90 border border-[#00aa00] rounded-lg px-6 py-4 shadow-lg shadow-[#00ff00]/20 w-full max-w-md mx-auto text-center';
     }
   };
 

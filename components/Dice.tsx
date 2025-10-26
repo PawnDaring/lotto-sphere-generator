@@ -18,7 +18,7 @@ const Ball: React.FC<{ number: number | null; isPowerball?: boolean; isMatched?:
     };
   }, []);
 
-  const baseClasses = 'w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center font-bold text-2xl sm:text-3xl border-4 shadow-lg transition-all duration-300 transform';
+  const baseClasses = 'w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center font-bold text-xl sm:text-2xl border-4 shadow-lg transition-all duration-300 transform';
   
   // Theme-based styles
   const getThemeClasses = () => {
